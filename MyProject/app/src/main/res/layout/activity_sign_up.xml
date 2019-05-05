@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:fitsSystemWindows="true"
+    >
+    <include layout="@layout/toolbar_layout"/>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layoutDirection="rtl"
+        android:id="@+id/LinLaySign"
+        android:layout_marginTop="140dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextHint">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="نام و نام خانوادگی"
+                android:textSize="15sp"
+                android:layout_margin="10dp"
+                android:inputType="text"
+                android:textColorHint="@color/Hirbod"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextHint"
+            app:counterMaxLength="11"
+
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="شماره موبایل"
+                android:textSize="15sp"
+                android:layout_margin="10dp"
+                android:inputType="number"
+                android:textColorHint="@color/Hirbod"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:theme="@style/EditTextHint"
+           >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="رمز عبور"
+                android:textSize="15sp"
+                android:layout_margin="10dp"
+                android:inputType="textPassword"
+                android:textColorHint="@color/Hirbod"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="خانم"
+                android:layout_margin="10dp"
+
+
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آقا"
+                android:layout_margin="10dp"
+
+
+               />
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ثبت نام"
+        android:layout_below="@+id/LinLaySign"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
